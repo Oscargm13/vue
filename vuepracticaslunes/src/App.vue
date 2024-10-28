@@ -1,25 +1,21 @@
 <template>
-  <div>
-    <h1>Titulo Estatico</h1>
-    <MenuComponent/>
+  <MenuComponent/>
     <hr/>
       <router-view></router-view>
     <hr/>
-  </div>
+  
 </template>
 
 <script>
-import MenuComponent from './components/MenuComponent.vue';
+
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
-    MenuComponent   
-  },
-};
+    
+  }
+}
 </script>
-
-
 
 <style>
 #app {
