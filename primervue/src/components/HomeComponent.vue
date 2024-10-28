@@ -13,7 +13,3 @@ export default {
     
 }
 </script>
-
-<style>
-    @import url(./../assets/css/estilos.css);
-</style>
