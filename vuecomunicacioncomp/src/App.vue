@@ -1,18 +1,33 @@
 <template>
   <div>
+    <MenuComponent/>
     <!-- <PadreDeportes /> -->
-    <PadreNumeros/>
+    <!-- <PadreNumeros/> -->
+    <!-- <ComicsComopnent/> -->
+    <!-- <SeleccionMultiple/> -->
+    <!-- <EjemploCheckbox/> -->
+    <hr/>
+    <router-view></router-view>
+    <hr/>
   </div>
 </template>
 
 <script>
+import MenuComponent from './components/MenuComponent.vue';
+//import ComicsComopnent from './components/ComicsComopnent.vue';
 //import PadreDeportes from "./components/PadreDeportes.vue";
-import PadreNumeros from "./components/PadreNumeros.vue"
+//import PadreNumeros from "./components/PadreNumeros.vue"
+//import SeleccionMultiple from "./components/SeleccionMultiple.vue";
+// import EjemploCheckbox from "./components/EjemploCheckbox.vue";
 export default {
   name: "App",
   components: {
     //PadreDeportes,
-    PadreNumeros
+    //PadreNumeros,
+    //ComicsComopnent
+    //SeleccionMultiple
+    // EjemploCheckbox
+    MenuComponent
   },
 };
 </script>

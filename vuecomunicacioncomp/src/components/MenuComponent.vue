@@ -2,10 +2,13 @@
     <div>
         <ul id="menu">
             <li>
-                <router-link to="/">Home |</router-link>
+                <router-link to="/">Home</router-link>
             </li>
             <li>
-                <router-link to="/sumar"> EjemploCheckbox</router-link>
+                <router-link to="/sumar">EjemploCheckbox</router-link>
+            </li>
+            <li>
+                <router-link to="/doble">doble</router-link>
             </li>
         </ul>
     </div>
