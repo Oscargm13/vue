@@ -1,6 +1,6 @@
 <template>
   <div>
-    <MenuComponent/>
+    <MenuTablaMultiplicar/>
     <!-- <PadreDeportes /> -->
     <!-- <PadreNumeros/> -->
     <!-- <ComicsComopnent/> -->
@@ -13,7 +13,8 @@
 </template>
 
 <script>
-import MenuComponent from './components/MenuComponent.vue';
+//import MenuComponent from './components/MenuComponent.vue';
+import MenuTablaMultiplicar from './components/MenuTablaMultiplicar.vue';
 //import ComicsComopnent from './components/ComicsComopnent.vue';
 //import PadreDeportes from "./components/PadreDeportes.vue";
 //import PadreNumeros from "./components/PadreNumeros.vue"
@@ -27,7 +28,7 @@ export default {
     //ComicsComopnent
     //SeleccionMultiple
     // EjemploCheckbox
-    MenuComponent
+    MenuTablaMultiplicar
   },
 };
 </script>
