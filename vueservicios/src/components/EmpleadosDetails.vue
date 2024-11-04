@@ -29,17 +29,15 @@
 </template>
 
 <script>
-import axios from 'axios';
-import Global from '../Global';
+import ServiceEmpleados from "./../services/ServiceEmpleados"
+const service = new ServiceEmpleados();
 
 export default {
     name: "EmpleadosDetails",
     methods: {
         buscarEmpleado() {
-            let request = "api/empleados/"+this.idEmpleado;
-            let url = Global.urlApiEmpleados + request;
-            axios.get(url).then(response => {
-                this.empleado = response.data;
+            service.findEmpleados(this.idEmpleado).then(result => {
+                this.empleado = result;
             })
         }
     },
@@ -51,11 +49,9 @@ export default {
         }
     },
     mounted() {
-        let request = "api/empleados";
-        let url = Global.urlApiEmpleados + request;
-        axios.get(url).then(response => {
-            console.log(response.data);
-            this.empleados = response.data;
+        service.getEmpleados().then(result => {
+            this.empleados = result;
+            console.log(result)
         })
     }
 }

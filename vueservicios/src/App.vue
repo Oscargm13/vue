@@ -1,18 +1,20 @@
 <template>
+
 <div>
-  <EmpleadosDetails/>
+  <MenuComponent/>
+  <router-view></router-view>
 </div>
 </template>
 
 <script>
 //import CochesComponent from './components/CochesComponent.vue'
-import EmpleadosDetails from './components/EmpleadosDetails.vue'
+import MenuComponent from './components/MenuComponent.vue'
 
 export default {
   name: 'App',
   components: {
     //CochesComponent,
-    EmpleadosDetails
+    MenuComponent
   }
 }
 </script>

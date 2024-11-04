@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import axios from 'axios'
-import Global from "./../Global";
+const service = new ServicesCoches();
+import ServicesCoches from "./../services/ServicesCoches"
 //SI NECESITAMOS VARIABLES DECLARADAS PARA USARLA EN TODOS LOS COMPONENTES
 //LA DECLARAMOS AQUI
 
@@ -25,13 +25,8 @@ export default {
         }
     },
     mounted() {
-        let request = "webresources/coches";
-        //LAS VARIABLES DECLARADAS POR EMCIMA DE EXPORT DEFAULT NO UTILIZAN 
-        //LA PALABRA THIS
-        let url = Global.urlApiCoches + request;
-        axios.get(url).then(response => {
-            console.log("leyendo servicio");
-            this.coches = response.data;
+        service.getCoches.then(result => {
+            this.coches = result;
         })
     }
 }
