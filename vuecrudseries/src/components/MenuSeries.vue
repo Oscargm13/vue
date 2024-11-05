@@ -35,8 +35,12 @@
             >
 
             <ul class="dropdown-menu">
-              <li>
-                <!-- <router-link class="dropdown-item"></router-link> -->
+              <li v-for="serie in series" :key="serie">
+                <router-link class="dropdown-item"
+				:to="'/series/' + serie.idSerie + '/' + serie.nombre
+				+ '/' + encodeURIComponent(serie.imagen) + '/' + serie.puntuacion + '/' + serie.anyo">
+				{{serie.nombre}}
+				</router-link>
               </li>
             </ul>
           </li>
@@ -49,7 +53,19 @@
 </template>
 
 <script>
+	import ServiceSeries from "./../services/ServiceSeries"
+	const service = new ServiceSeries();
     export default {
         name: "MenuSeries",
+		mounted() {
+			service.getSeries().then(result => {
+				this.series = result;
+			})
+		},
+		data() {
+			return {
+				series: []
+			}
+		}
     }
 </script>

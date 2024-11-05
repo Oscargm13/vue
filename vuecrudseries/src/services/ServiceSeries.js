@@ -13,4 +13,15 @@ export default class ServiceSeries {
             })
         })
     }
+	getPersonajesSerie(id) {
+		return new Promise(function (resolve) {
+            let request = "api/series/personajesserie/" + id
+            let personajes = [];
+            let url = Global.urlApiSeries + request;
+            axios.get(url).then(response => {
+                personajes = response.data;
+                resolve(personajes);
+            })
+        })
+	}
 }
